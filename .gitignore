@@ -219,3 +219,6 @@ __marimo__/
 
 # MacOS
 .DS_Store
+
+#Ajout du venv du projet
+wikipedia_scraper_env/
