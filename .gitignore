@@ -220,3 +220,7 @@ __marimo__/
 # MacOS
 .DS_Store
 dev/.DS_Store
+
+# Other specific documents in the dev folder
+dev/leaders.json
+dev/leaders_scraper.py
