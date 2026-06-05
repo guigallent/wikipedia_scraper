@@ -4,7 +4,7 @@
 
 ## 📖 Description
 
-The **Wikipedia Scraper** is a collaborative Python project built in pair programming mode. The goal was to **create a simple but realistic data pipeline that collects political leaders from an external REST API and enriches this data by scraping their Wikipedia pages to extract the first biography paragraph**. The final output is a JSON file containing leaders with key information to identify them, along with their first Wikipedia paragraph (in the language of the corresponding country). The project focuses on a fixed set of countries: France (FR), United States (US), Belgium (BE), Morocco (MA), and Russia (RU). 
+The **Wikipedia Scraper** is a collaborative Python project built in pair programming mode. The goal was to **create a simple but realistic data pipeline that collects political leaders from an external REST API and enriches this data by scraping their Wikipedia pages to extract the first biography paragraph**. The final output is a JSON file containing leaders with key information to identify them, along with their first Wikipedia paragraph (in the language of the corresponding country). 
 
 During this project, the team: 
 
@@ -26,6 +26,7 @@ Through this project, we also improved our understanding of:
 
 ## 📦 Repo structure
 
+```text
 wikipedia-scraper/
 ├── .gitignore
 ├── README.md
@@ -39,6 +40,7 @@ wikipedia-scraper/
     ├── api_client.py
     ├── file_utils.py
     └── html_scraper.py
+```
 
 📝 N.B. : The `dev/` folder was used as our training space during the project. It contains notebooks where we tested the API and explored how it works before building the main code. It is not required to run the project and can be ignored.
 
@@ -48,7 +50,7 @@ The project is organized into three main modules located in the `src/` folder:
 
 - `api_client.py` handles requests to the Country Leaders API, retrieves countries and leaders, and refreshes cookies when needed.
 
-- `file_utils.py` contains helper function used to extract Wikipedia URLs and organize leader information before scraping.
+- `file_utils.py` contains a helper function used to extract Wikipedia URLs and organize leader information before scraping.
 
 - `html_scraper.py` fetches Wikipedia pages, extracts and cleans the first biography paragraph, and saves the results to a JSON file.
 
@@ -94,7 +96,7 @@ Each leader is stored as a separate entry in the JSON file.
 
 ## 🔧 Possible improvements 
 
-Even if this project already works as a small data pipeline, there are a few ways it could be improved in the future.
+Even if this project already works as a small data pipeline, there are a few ways it could be improved in the future:
 
 ### 1. Custom output file name 
 
@@ -104,7 +106,7 @@ A possible improvement would be to let the user choose the output file name dire
 
 ### 2. Improve user interaction for multiple runs
 
-Instead of stopping the program after one run, an improvement would be to let the user choose another country directly in the terminal.
+Instead of stopping the program after one run, it could be improved by letting the user choose another country directly in the terminal.
 
 After finishing, the program could ask:
 
@@ -112,7 +114,7 @@ After finishing, the program could ask:
 
 This would allow the user to use the script several times without restarting it manually.
 
-It could also be combined with the first improvement by letting the user choose a different output file name each time, so each run saves a new JSON file.
+It could also be combined with the first improvement by letting the user choose a different output file name each time, so each run is saved into different JSON files.
 
 ### 3. Improve text cleaning 
 
