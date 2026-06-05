@@ -107,7 +107,6 @@ class WikipediaScraper:
             
         #return empty str if no <p> found
         #this avoids returning None and make the result always a str    
-        print("No paragraph found")
         return ""
     
 
