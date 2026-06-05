@@ -58,6 +58,7 @@ class WikipediaScraper:
 
             #Return the HTML content of the response
             print("HTML received")
+            time.sleep(0.5)
             return req.text
 
 
@@ -66,8 +67,6 @@ class WikipediaScraper:
             print("Connection error")
             return "Connection drops"
          
-
-
 
     def get_first_paragraph(self, html:str):
         
@@ -93,8 +92,12 @@ class WikipediaScraper:
         #loop through all paragraph elements <p>
         for p in soup.find_all("p"):
 
-            #check if the paragraph contains bold text
-            if p.find("b"):
+            # skip empty paragraphs and infobox paragraphs
+            if "mw-empty-elt" in p.get("class", []) or p.find_parent(class_="infobox"):
+                continue
+
+            #check if the paragraph contains bold text and a minimum length
+            if p.find("b") and len(p.get_text().strip()) > 30:
 
                 #extract only the text (remove HTML tags)
                 first_paragraph = p.get_text()
