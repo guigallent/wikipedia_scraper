@@ -117,7 +117,8 @@ It could also be combined with the first improvement by letting the user choose 
 ### 3. Improve text cleaning 
 
 The current cleaning process removes most unwanted characters, but some elements still remain, such as: 
-- pronunciation guides (e.g. `/ʒak ʃiʁak/`) - unwanted words like “Écouter” 
+- pronunciation guides (e.g. `/ʒak ʃiʁak/`) 
+- unwanted words like “Écouter” 
 - some leftover formatting from Wikipedia 
 
 A better cleaning function could improve the final output by making the text more readable and consistent.
