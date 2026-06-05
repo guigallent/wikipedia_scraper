@@ -1,6 +1,4 @@
-from api_client import CountryLeadersAPI
-from html_scraper import WikipediaScraper
-from file_utils import get_urls
+from src import CountryLeadersAPI, WikipediaScraper, get_urls
 
 def main():
     """
