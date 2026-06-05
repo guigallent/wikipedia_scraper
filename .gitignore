@@ -227,3 +227,7 @@ dev/.DS_Store
 # Other specific documents in the dev folder
 dev/leaders.json
 dev/leaders_scraper.py
+
+#Outputs
+leaders.json
+output.json
